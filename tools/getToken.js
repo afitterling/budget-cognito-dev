@@ -11,7 +11,7 @@ async function getToken() {
     ClientId: process.env.COGNITO_CLIENT_ID, // your App Client ID
     AuthParameters: {
       USERNAME: "newuser@example.com",
-      PASSWORD: "Password123!",
+      PASSWORD: process.env.password,
     },
   });
 
