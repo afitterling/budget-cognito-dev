@@ -1,7 +1,10 @@
 # A Versatile AWS Cognito Identity Pool in SST
 
-A minimal Cognito Identity Pool setup in SST — useful when you just want to share the same identity across several stacks or apps.
+A Cognito Identity Pool setup in SST — useful when you just want to share the same identity across several stacks or apps.
 To use in your consumer / api / client:
+
+For threat modeling, everything has to be protected. The idea here is to split the idendity pool from any consumer.
+Follow does an example on how to integrate into your API / Client with AWS SSM Parameter.
 
 ```JS
     const prefix = `/identity/identity-pool-budget/${$app.stage}`;
