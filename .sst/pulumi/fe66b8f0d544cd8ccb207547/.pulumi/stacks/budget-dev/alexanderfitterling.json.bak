@@ -1,0 +1,73 @@
+{
+    "version": 3,
+    "checkpoint": {
+        "stack": "organization/budget-dev/alexanderfitterling",
+        "latest": {
+            "manifest": {
+                "time": "2025-09-14T09:10:16.363889+02:00",
+                "magic": "77be084e65c763fde87b290a0a6ba5aaacad687cde41d20d76768df34b0db77a",
+                "version": "v3.146.0"
+            },
+            "secrets_providers": {
+                "type": "passphrase",
+                "state": {
+                    "salt": "v1:nrWRgzFtUuA=:v1:epnZlejQkwIoJTYq:btGemlpsoozuIp0FHHenpeV9z8mM8w=="
+                }
+            },
+            "resources": [
+                {
+                    "urn": "urn:pulumi:alexanderfitterling::budget-dev::pulumi:providers:aws::default_6_66_2",
+                    "custom": true,
+                    "id": "cdc9a6d2-dc6f-4da7-8def-74ad33edad60",
+                    "type": "pulumi:providers:aws",
+                    "inputs": {
+                        "__internal": {},
+                        "defaultTags": "{\"tags\":{\"sst:app\":\"budget-dev\",\"sst:stage\":\"alexanderfitterling\"}}",
+                        "region": "eu-central-1",
+                        "skipCredentialsValidation": "false",
+                        "skipRegionValidation": "true",
+                        "version": "6.66.2"
+                    },
+                    "outputs": {
+                        "defaultTags": "{\"tags\":{\"sst:app\":\"budget-dev\",\"sst:stage\":\"alexanderfitterling\"}}",
+                        "region": "eu-central-1",
+                        "skipCredentialsValidation": "false",
+                        "skipRegionValidation": "true",
+                        "version": "6.66.2"
+                    },
+                    "created": "2025-09-14T07:08:12.25402Z",
+                    "modified": "2025-09-14T07:08:12.25402Z"
+                }
+            ],
+            "pending_operations": [
+                {
+                    "resource": {
+                        "urn": "urn:pulumi:alexanderfitterling::budget-dev::pulumi:providers:aws::default_6_66_2",
+                        "custom": true,
+                        "id": "cdc9a6d2-dc6f-4da7-8def-74ad33edad60",
+                        "type": "pulumi:providers:aws",
+                        "inputs": {
+                            "__internal": {},
+                            "defaultTags": "{\"tags\":{\"sst:app\":\"budget-dev\",\"sst:stage\":\"alexanderfitterling\"}}",
+                            "region": "eu-central-1",
+                            "skipCredentialsValidation": "false",
+                            "skipRegionValidation": "true",
+                            "version": "6.66.2"
+                        },
+                        "outputs": {
+                            "defaultTags": "{\"tags\":{\"sst:app\":\"budget-dev\",\"sst:stage\":\"alexanderfitterling\"}}",
+                            "region": "eu-central-1",
+                            "skipCredentialsValidation": "false",
+                            "skipRegionValidation": "true",
+                            "version": "6.66.2"
+                        },
+                        "created": "2025-09-14T07:08:12.25402Z",
+                        "modified": "2025-09-14T07:08:12.25402Z"
+                    },
+                    "type": "deleting"
+                }
+            ],
+            "metadata": {}
+        }
+    }
+}

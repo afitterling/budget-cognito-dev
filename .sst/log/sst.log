@@ -1,0 +1,47 @@
+time=2025-09-14T09:09:57.812+02:00 level=INFO msg="checking for pulumi" path="/Users/alexanderfitterling/Library/Application Support/sst/bin/pulumi"
+time=2025-09-14T09:09:57.949+02:00 level=INFO msg="checking for bun" path="/Users/alexanderfitterling/Library/Application Support/sst/bin/bun"
+time=2025-09-14T09:09:57.960+02:00 level=INFO msg="initializing project" version=3.17.13
+time=2025-09-14T09:09:57.960+02:00 level=INFO msg="esbuild building" out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757833797960.mjs
+time=2025-09-14T09:09:57.963+02:00 level=INFO msg="esbuild built" outfile=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757833797960.mjs
+time=2025-09-14T09:09:57.963+02:00 level=INFO msg="evaluating config"
+time=2025-09-14T09:09:57.996+02:00 level=INFO msg="config evaluated"
+time=2025-09-14T09:09:57.997+02:00 level=INFO msg="checking platform"
+time=2025-09-14T09:09:57.997+02:00 level=INFO msg="loading home"
+time=2025-09-14T09:09:59.422+02:00 level=INFO msg="aws credentials found" region=eu-central-1 profile=alex1-dev
+time=2025-09-14T09:09:59.423+02:00 level=INFO msg="fetching bootstrap"
+time=2025-09-14T09:10:00.377+02:00 level=INFO msg="found existing bootstrap" data="{\"version\":5,\"asset\":\"sst-asset-uhvtcwesnfsn\",\"assetEcrRegistryId\":\"327261196437\",\"assetEcrUrl\":\"327261196437.dkr.ecr.eu-central-1.amazonaws.com/sst-asset\",\"state\":\"sst-state-uhvtcwesnfsn\",\"appsyncHttp\":\"\",\"appsyncRealtime\":\"\"}"
+time=2025-09-14T09:10:00.377+02:00 level=INFO msg="loaded config" app=budget-dev stage=alexanderfitterling
+time=2025-09-14T09:10:00.379+02:00 level=INFO msg="initializing ui" isTTY=true
+time=2025-09-14T09:10:00.379+02:00 level=INFO msg="server port assigned" port=13558
+time=2025-09-14T09:10:00.379+02:00 level=INFO msg="running stack command" service=project.run cmd=remove
+time=2025-09-14T09:10:00.379+02:00 level=INFO msg="INFO locking app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:10:00.379+02:00 level=INFO msg="INFO getting data key=lock app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:10:00.380+02:00 level=INFO msg=starting service=server
+time=2025-09-14T09:10:00.381+02:00 level=INFO msg=server service=server addr=0.0.0.0:13558
+time=2025-09-14T09:10:02.358+02:00 level=INFO msg="INFO putting update app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:10:03.069+02:00 level=INFO msg="INFO getting passphrase app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:10:04.101+02:00 level=INFO msg="INFO pulling state app=budget-dev stage=alexanderfitterling out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/pulumi/fe66b8f0d544cd8ccb207547/.pulumi/stacks/budget-dev/alexanderfitterling.json"
+time=2025-09-14T09:10:05.392+02:00 level=INFO msg="got previous deployment" service=project.run updateID=fe66b8f0d544cd8ccb207547
+time=2025-09-14T09:10:05.392+02:00 level=INFO msg="esbuild building" out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757833804099.mjs
+time=2025-09-14T09:10:05.425+02:00 level=INFO msg="esbuild built" outfile=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757833804099.mjs
+time=2025-09-14T09:10:05.429+02:00 level=INFO msg="built sst.config.ts" service=project.run updateID=fe66b8f0d544cd8ccb207547 to=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757833804099.mjs
+time=2025-09-14T09:10:05.433+02:00 level=INFO msg="tracked files" service=project.run updateID=fe66b8f0d544cd8ccb207547
+time=2025-09-14T09:10:05.433+02:00 level=INFO msg="INFO getting data key=secret app=budget-dev stage=_fallback"
+time=2025-09-14T09:10:05.433+02:00 level=INFO msg="INFO getting data key=secret app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:10:06.184+02:00 level=INFO msg="starting pulumi" service=project.run updateID=fe66b8f0d544cd8ccb207547 args="[/Users/alexanderfitterling/Library/Application Support/sst/bin/pulumi destroy --yes -f --stack organization/budget-dev/alexanderfitterling --non-interactive --event-log /Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/pulumi/fe66b8f0d544cd8ccb207547/eventlog.json]"
+time=2025-09-14T09:10:11.186+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
+time=2025-09-14T09:10:12.657+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
+time=2025-09-14T09:10:13.907+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
+time=2025-09-14T09:10:15.045+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
+time=2025-09-14T09:10:16.242+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
+time=2025-09-14T09:10:16.385+02:00 level=INFO msg="pulumi exited" service=project.run updateID=fe66b8f0d544cd8ccb207547 err=<nil>
+time=2025-09-14T09:10:16.385+02:00 level=INFO msg="eof and exited" service=project.run updateID=fe66b8f0d544cd8ccb207547 eofs=0
+time=2025-09-14T09:10:16.385+02:00 level=INFO msg="eof and exited" service=project.run updateID=fe66b8f0d544cd8ccb207547 eofs=1
+time=2025-09-14T09:10:16.385+02:00 level=INFO msg="breaking out of tail loop" service=project.run updateID=fe66b8f0d544cd8ccb207547
+time=2025-09-14T09:10:16.385+02:00 level=INFO msg="parsing state" service=project.run updateID=fe66b8f0d544cd8ccb207547
+time=2025-09-14T09:10:16.386+02:00 level=INFO msg="generating types" root=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev
+time=2025-09-14T09:10:16.388+02:00 level=INFO msg="canceling partial" service=project.run updateID=fe66b8f0d544cd8ccb207547
+time=2025-09-14T09:10:16.389+02:00 level=INFO msg="waiting for partial to exit" service=project.run updateID=fe66b8f0d544cd8ccb207547
+time=2025-09-14T09:10:17.269+02:00 level=INFO msg="INFO pushing snapshot updateID=fe66b8f0d544cd8ccb207547"
+time=2025-09-14T09:10:17.270+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
+time=2025-09-14T09:10:17.270+02:00 level=INFO msg="INFO pushing eventlog updateID=fe66b8f0d544cd8ccb207547"

@@ -1,0 +1,45 @@
+Destroying (alexanderfitterling):
+    pulumi:pulumi:Stack budget-dev-alexanderfitterling  warning: using pulumi-language-nodejs from $PATH at /opt/homebrew/bin/pulumi-language-nodejs
+@ destroying....
+
+@ destroying....
+ -  aws:ssm:Parameter CognitoUserPoolArnParam deleting (0s) 
+ -  aws:ssm:Parameter CognitoUserPoolIdParam deleting (0s) 
+@ destroying.......
+ -  aws:ssm:Parameter CognitoUserPoolIdParam deleted (3s) 
+ -  aws:ssm:Parameter CognitoUserPoolArnParam deleted (3s) 
+ -  aws:cognito:UserPool MyUserPoolUserPool deleting (0s) 
+@ destroying....
+ -  aws:cognito:UserPool MyUserPoolUserPool deleted (0.92s) 
+ -  aws:lambda:Function MyUserPoolTriggerpreSignUpFunction deleting (0s) 
+@ destroying....
+ -  aws:lambda:Function MyUserPoolTriggerpreSignUpFunction deleted (0.87s) 
+ -  aws:cloudwatch:LogGroup MyUserPoolTriggerpreSignUpLogGroup deleting (0s) 
+ -  aws:iam:Role MyUserPoolTriggerpreSignUpRole deleting (0s) 
+ -  aws:s3:BucketObjectv2 MyUserPoolTriggerpreSignUpCode deleting (0s) 
+ -  aws:s3:BucketObjectv2 MyUserPoolTriggerpreSignUpCode deleted (0.72s) 
+@ destroying....
+ -  aws:cloudwatch:LogGroup MyUserPoolTriggerpreSignUpLogGroup deleted (1.00s) 
+ -  aws:iam:Role MyUserPoolTriggerpreSignUpRole deleted (1s) 
+ -  sst:aws:Function MyUserPoolTriggerpreSignUp deleting (0s) 
+ -  sst:sst:LinkRef WebLinkRef deleting (0s) 
+ -  random:index:RandomBytes LambdaEncryptionKey deleting (0s) 
+ -  sst:aws:CognitoUserPoolClient Web deleting (0s) 
+ -  sst:sst:LinkRef MyIdentityPoolLinkRef deleting (0s) 
+ -  sst:aws:CognitoIdentityPool MyIdentityPool deleting (0s) 
+ -  sst:sst:LinkRef MyUserPoolLinkRef deleting (0s) 
+ -  sst:aws:CognitoUserPool MyUserPool deleting (0s) 
+ -  random:index:RandomBytes LambdaEncryptionKey deleted (0.02s) 
+ -  pulumi:pulumi:Stack budget-dev-alexanderfitterling deleting (0s) warning: using pulumi-language-nodejs from $PATH at /opt/homebrew/bin/pulumi-language-nodejs
+ -  pulumi:pulumi:Stack budget-dev-alexanderfitterling deleted (0.00s) 1 warning
+Diagnostics:
+  pulumi:pulumi:Stack (budget-dev-alexanderfitterling):
+    warning: using pulumi-language-nodejs from $PATH at /opt/homebrew/bin/pulumi-language-nodejs
+
+Resources:
+    - 16 deleted
+
+Duration: 9s
+
+The resources in the stack have been deleted, but the history and configuration associated with the stack are still maintained. 
+If you want to remove the stack completely, run `pulumi stack rm alexanderfitterling`.
