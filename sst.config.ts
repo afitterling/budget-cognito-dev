@@ -12,13 +12,13 @@ export default $config({
 
   async run() {
     // 1) Cognito User Pool
-    const userPool = new sst.aws.CognitoUserPool("MyUserPool", {
+    const userPool = new sst.aws.CognitoUserPool("MyUserPool", /* {
       triggers: {
         preSignUp: {
           handler: "functions/preSignUp.main",
         },
       },
-    });
+    } */);
 
     // 2) User Pool Client with password & refresh flows
     const client = userPool.addClient("Web");
@@ -32,13 +32,6 @@ export default $config({
     const prefix = `/identity/${$app.name}/${$app.stage}`;
 
     // 5) Write parameters to SSM
-    new aws.ssm.Parameter("CognitoUserPoolIdParam", {
-      name: `${prefix}/COGNITO_USER_POOL_ID`,
-      type: "String",
-      value: userPool.id,
-      overwrite: true,
-    });
-
     new aws.ssm.Parameter("CognitoUserPoolIdParam", {
       name: `${prefix}/COGNITO_USER_POOL_ID`,
       type: "String",

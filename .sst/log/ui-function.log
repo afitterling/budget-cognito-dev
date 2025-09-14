@@ -1,7 +1,5 @@
-time=2025-09-14T09:07:58.066+02:00 level=INFO msg="checking for pulumi" path="/Users/alexanderfitterling/Library/Application Support/sst/bin/pulumi"
-time=2025-09-14T09:07:58.215+02:00 level=INFO msg="checking for bun" path="/Users/alexanderfitterling/Library/Application Support/sst/bin/bun"
-time=2025-09-14T09:07:58.222+02:00 level=INFO msg="initializing ui" isTTY=true
-time=2025-09-14T09:07:58.222+02:00 level=INFO msg="initialized ui"
-time=2025-09-14T09:09:53.994+02:00 level=INFO msg=interrupted
-"initialized ui"
-time=2025-09-14T09:09:53.994+02:00 level=INFO msg=interrupted
+time=2025-09-14T09:24:57.237+02:00 level=INFO msg="checking for pulumi" path="/Users/alexanderfitterling/Library/Application Support/sst/bin/pulumi"
+time=2025-09-14T09:24:57.385+02:00 level=INFO msg="checking for bun" path="/Users/alexanderfitterling/Library/Application Support/sst/bin/bun"
+time=2025-09-14T09:24:57.390+02:00 level=INFO msg="initializing ui" isTTY=true
+time=2025-09-14T09:24:57.392+02:00 level=INFO msg="initializing ui" isTTY=true
+time=2025-09-14T09:24:57.392+02:00 level=INFO msg="initialized ui"

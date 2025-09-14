@@ -1,47 +1,173 @@
-time=2025-09-14T09:09:57.812+02:00 level=INFO msg="checking for pulumi" path="/Users/alexanderfitterling/Library/Application Support/sst/bin/pulumi"
-time=2025-09-14T09:09:57.949+02:00 level=INFO msg="checking for bun" path="/Users/alexanderfitterling/Library/Application Support/sst/bin/bun"
-time=2025-09-14T09:09:57.960+02:00 level=INFO msg="initializing project" version=3.17.13
-time=2025-09-14T09:09:57.960+02:00 level=INFO msg="esbuild building" out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757833797960.mjs
-time=2025-09-14T09:09:57.963+02:00 level=INFO msg="esbuild built" outfile=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757833797960.mjs
-time=2025-09-14T09:09:57.963+02:00 level=INFO msg="evaluating config"
-time=2025-09-14T09:09:57.996+02:00 level=INFO msg="config evaluated"
-time=2025-09-14T09:09:57.997+02:00 level=INFO msg="checking platform"
-time=2025-09-14T09:09:57.997+02:00 level=INFO msg="loading home"
-time=2025-09-14T09:09:59.422+02:00 level=INFO msg="aws credentials found" region=eu-central-1 profile=alex1-dev
-time=2025-09-14T09:09:59.423+02:00 level=INFO msg="fetching bootstrap"
-time=2025-09-14T09:10:00.377+02:00 level=INFO msg="found existing bootstrap" data="{\"version\":5,\"asset\":\"sst-asset-uhvtcwesnfsn\",\"assetEcrRegistryId\":\"327261196437\",\"assetEcrUrl\":\"327261196437.dkr.ecr.eu-central-1.amazonaws.com/sst-asset\",\"state\":\"sst-state-uhvtcwesnfsn\",\"appsyncHttp\":\"\",\"appsyncRealtime\":\"\"}"
-time=2025-09-14T09:10:00.377+02:00 level=INFO msg="loaded config" app=budget-dev stage=alexanderfitterling
-time=2025-09-14T09:10:00.379+02:00 level=INFO msg="initializing ui" isTTY=true
-time=2025-09-14T09:10:00.379+02:00 level=INFO msg="server port assigned" port=13558
-time=2025-09-14T09:10:00.379+02:00 level=INFO msg="running stack command" service=project.run cmd=remove
-time=2025-09-14T09:10:00.379+02:00 level=INFO msg="INFO locking app=budget-dev stage=alexanderfitterling"
-time=2025-09-14T09:10:00.379+02:00 level=INFO msg="INFO getting data key=lock app=budget-dev stage=alexanderfitterling"
-time=2025-09-14T09:10:00.380+02:00 level=INFO msg=starting service=server
-time=2025-09-14T09:10:00.381+02:00 level=INFO msg=server service=server addr=0.0.0.0:13558
-time=2025-09-14T09:10:02.358+02:00 level=INFO msg="INFO putting update app=budget-dev stage=alexanderfitterling"
-time=2025-09-14T09:10:03.069+02:00 level=INFO msg="INFO getting passphrase app=budget-dev stage=alexanderfitterling"
-time=2025-09-14T09:10:04.101+02:00 level=INFO msg="INFO pulling state app=budget-dev stage=alexanderfitterling out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/pulumi/fe66b8f0d544cd8ccb207547/.pulumi/stacks/budget-dev/alexanderfitterling.json"
-time=2025-09-14T09:10:05.392+02:00 level=INFO msg="got previous deployment" service=project.run updateID=fe66b8f0d544cd8ccb207547
-time=2025-09-14T09:10:05.392+02:00 level=INFO msg="esbuild building" out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757833804099.mjs
-time=2025-09-14T09:10:05.425+02:00 level=INFO msg="esbuild built" outfile=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757833804099.mjs
-time=2025-09-14T09:10:05.429+02:00 level=INFO msg="built sst.config.ts" service=project.run updateID=fe66b8f0d544cd8ccb207547 to=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757833804099.mjs
-time=2025-09-14T09:10:05.433+02:00 level=INFO msg="tracked files" service=project.run updateID=fe66b8f0d544cd8ccb207547
-time=2025-09-14T09:10:05.433+02:00 level=INFO msg="INFO getting data key=secret app=budget-dev stage=_fallback"
-time=2025-09-14T09:10:05.433+02:00 level=INFO msg="INFO getting data key=secret app=budget-dev stage=alexanderfitterling"
-time=2025-09-14T09:10:06.184+02:00 level=INFO msg="starting pulumi" service=project.run updateID=fe66b8f0d544cd8ccb207547 args="[/Users/alexanderfitterling/Library/Application Support/sst/bin/pulumi destroy --yes -f --stack organization/budget-dev/alexanderfitterling --non-interactive --event-log /Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/pulumi/fe66b8f0d544cd8ccb207547/eventlog.json]"
-time=2025-09-14T09:10:11.186+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
-time=2025-09-14T09:10:12.657+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
-time=2025-09-14T09:10:13.907+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
-time=2025-09-14T09:10:15.045+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
-time=2025-09-14T09:10:16.242+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
-time=2025-09-14T09:10:16.385+02:00 level=INFO msg="pulumi exited" service=project.run updateID=fe66b8f0d544cd8ccb207547 err=<nil>
-time=2025-09-14T09:10:16.385+02:00 level=INFO msg="eof and exited" service=project.run updateID=fe66b8f0d544cd8ccb207547 eofs=0
-time=2025-09-14T09:10:16.385+02:00 level=INFO msg="eof and exited" service=project.run updateID=fe66b8f0d544cd8ccb207547 eofs=1
-time=2025-09-14T09:10:16.385+02:00 level=INFO msg="breaking out of tail loop" service=project.run updateID=fe66b8f0d544cd8ccb207547
-time=2025-09-14T09:10:16.385+02:00 level=INFO msg="parsing state" service=project.run updateID=fe66b8f0d544cd8ccb207547
-time=2025-09-14T09:10:16.386+02:00 level=INFO msg="generating types" root=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev
-time=2025-09-14T09:10:16.388+02:00 level=INFO msg="canceling partial" service=project.run updateID=fe66b8f0d544cd8ccb207547
-time=2025-09-14T09:10:16.389+02:00 level=INFO msg="waiting for partial to exit" service=project.run updateID=fe66b8f0d544cd8ccb207547
-time=2025-09-14T09:10:17.269+02:00 level=INFO msg="INFO pushing snapshot updateID=fe66b8f0d544cd8ccb207547"
-time=2025-09-14T09:10:17.270+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8f0d544cd8ccb207547"
-time=2025-09-14T09:10:17.270+02:00 level=INFO msg="INFO pushing eventlog updateID=fe66b8f0d544cd8ccb207547"
+time=2025-09-14T09:24:54.893+02:00 level=INFO msg="checking for pulumi" path="/Users/alexanderfitterling/Library/Application Support/sst/bin/pulumi"
+time=2025-09-14T09:24:55.025+02:00 level=INFO msg="checking for bun" path="/Users/alexanderfitterling/Library/Application Support/sst/bin/bun"
+time=2025-09-14T09:24:55.036+02:00 level=INFO msg="initializing project" version=3.17.13
+time=2025-09-14T09:24:55.037+02:00 level=INFO msg="esbuild building" out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757834695037.mjs
+time=2025-09-14T09:24:55.039+02:00 level=INFO msg="esbuild built" outfile=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757834695037.mjs
+time=2025-09-14T09:24:55.040+02:00 level=INFO msg="evaluating config"
+time=2025-09-14T09:24:55.074+02:00 level=INFO msg="config evaluated"
+time=2025-09-14T09:24:55.074+02:00 level=INFO msg="checking platform"
+time=2025-09-14T09:24:55.075+02:00 level=INFO msg="loading home"
+time=2025-09-14T09:24:56.159+02:00 level=INFO msg="aws credentials found" region=eu-central-1 profile=alex1-dev
+time=2025-09-14T09:24:56.159+02:00 level=INFO msg="fetching bootstrap"
+time=2025-09-14T09:24:57.144+02:00 level=INFO msg="found existing bootstrap" data="{\"version\":5,\"asset\":\"sst-asset-uhvtcwesnfsn\",\"assetEcrRegistryId\":\"327261196437\",\"assetEcrUrl\":\"327261196437.dkr.ecr.eu-central-1.amazonaws.com/sst-asset\",\"state\":\"sst-state-uhvtcwesnfsn\",\"appsyncHttp\":\"\",\"appsyncRealtime\":\"\"}"
+time=2025-09-14T09:24:57.144+02:00 level=INFO msg="loaded config" app=budget-dev stage=alexanderfitterling
+time=2025-09-14T09:24:57.144+02:00 level=INFO msg=mosaic project=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev
+time=2025-09-14T09:24:57.145+02:00 level=INFO msg="starting watcher" service=watcher root=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev
+time=2025-09-14T09:24:57.145+02:00 level=INFO msg="server port assigned" port=13558
+time=2025-09-14T09:24:57.145+02:00 level=INFO msg=starting service=dev
+time=2025-09-14T09:24:57.146+02:00 level=INFO msg="getting endpoint"
+time=2025-09-14T09:24:57.146+02:00 level=INFO msg=starting service=server
+time=2025-09-14T09:24:57.147+02:00 level=INFO msg=watching service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev
+time=2025-09-14T09:24:57.147+02:00 level=INFO msg=server service=server addr=0.0.0.0:13558
+time=2025-09-14T09:24:57.147+02:00 level=INFO msg=starting service=deployer
+time=2025-09-14T09:24:57.147+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T09:24:57.147+02:00 level=INFO msg=watching service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools
+time=2025-09-14T09:24:57.150+02:00 level=INFO msg=resize
+time=2025-09-14T09:24:57.387+02:00 level=INFO msg=subscribed service=dev addr=[::1]:50024
+time=2025-09-14T09:24:57.392+02:00 level=INFO msg=subscribed service=dev addr=[::1]:50028
+time=2025-09-14T09:24:57.392+02:00 level=INFO msg="deploy requested" service=dev
+time=2025-09-14T09:24:57.392+02:00 level=INFO msg=deploying service=deployer
+time=2025-09-14T09:24:57.392+02:00 level=INFO msg="running stack command" service=project.run cmd=deploy
+time=2025-09-14T09:24:57.392+02:00 level=INFO msg="INFO locking app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:24:57.392+02:00 level=INFO msg="INFO getting data key=lock app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:24:58.647+02:00 level=INFO msg="found appsync" rest=5f3hi7gihjdb7o3d4jipdeq3fy.appsync-api.eu-central-1.amazonaws.com realtime=5f3hi7gihjdb7o3d4jipdeq3fy.appsync-realtime-api.eu-central-1.amazonaws.com
+time=2025-09-14T09:24:58.647+02:00 level=INFO msg="checking if appsync is ready"
+time=2025-09-14T09:24:59.025+02:00 level=INFO msg="INFO putting update app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:24:59.551+02:00 level=INFO msg="INFO connecting service=appsync.connection"
+time=2025-09-14T09:24:59.747+02:00 level=INFO msg="INFO getting passphrase app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:25:00.700+02:00 level=INFO msg="INFO pulling state app=budget-dev stage=alexanderfitterling out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/pulumi/fe66b8e3254f1fa2cb615cfe/.pulumi/stacks/budget-dev/alexanderfitterling.json"
+time=2025-09-14T09:25:00.895+02:00 level=INFO msg="INFO connect message service=appsync.connection msg=\"map[connectionTimeoutMs:300000 type:connection_ack]\""
+time=2025-09-14T09:25:00.895+02:00 level=INFO msg="subscribing to" prefix=/sst/budget-dev/alexanderfitterling/in
+time=2025-09-14T09:25:00.896+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"
+time=2025-09-14T09:25:01.309+02:00 level=INFO msg="INFO msg service=appsync.connection type=subscribe_success id=0199471ce85fd0b101dd4636"
+time=2025-09-14T09:25:01.310+02:00 level=INFO msg="INFO subscribed service=appsync.connection channel=/sst/budget-dev/alexanderfitterling/in id=0199471ce85fd0b101dd4636"
+time=2025-09-14T09:25:01.310+02:00 level=INFO msg=starting service=aws.task
+time=2025-09-14T09:25:01.553+02:00 level=INFO msg="got previous deployment" service=project.run updateID=fe66b8e3254f1fa2cb615cfe
+time=2025-09-14T09:25:01.553+02:00 level=INFO msg="esbuild building" out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757834700699.mjs
+time=2025-09-14T09:25:01.587+02:00 level=INFO msg="esbuild built" outfile=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757834700699.mjs
+time=2025-09-14T09:25:01.591+02:00 level=INFO msg="built sst.config.ts" service=project.run updateID=fe66b8e3254f1fa2cb615cfe to=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757834700699.mjs
+time=2025-09-14T09:25:01.594+02:00 level=INFO msg="tracked files" service=project.run updateID=fe66b8e3254f1fa2cb615cfe
+time=2025-09-14T09:25:01.594+02:00 level=INFO msg="INFO getting data key=secret app=budget-dev stage=_fallback"
+time=2025-09-14T09:25:01.594+02:00 level=INFO msg="INFO getting data key=secret app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:25:02.336+02:00 level=INFO msg="starting pulumi" service=project.run updateID=fe66b8e3254f1fa2cb615cfe args="[/Users/alexanderfitterling/Library/Application Support/sst/bin/pulumi up --yes -f --stack organization/budget-dev/alexanderfitterling --non-interactive --event-log /Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/pulumi/fe66b8e3254f1fa2cb615cfe/eventlog.json --config aws:defaultTags={\"tags\":{\"sst:app\":\"budget-dev\",\"sst:stage\":\"alexanderfitterling\"}} --config aws:region=eu-central-1]"
+time=2025-09-14T09:25:07.338+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e3254f1fa2cb615cfe"
+time=2025-09-14T09:25:09.722+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e3254f1fa2cb615cfe"
+time=2025-09-14T09:25:14.994+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e3254f1fa2cb615cfe"
+time=2025-09-14T09:25:14.994+02:00 level=INFO msg="telemetry tracking error" service=project.run updateID=fe66b8e3254f1fa2cb615cfe
+time=2025-09-14T09:25:16.088+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e3254f1fa2cb615cfe"
+time=2025-09-14T09:25:17.304+02:00 level=INFO msg="pulumi exited" service=project.run updateID=fe66b8e3254f1fa2cb615cfe err=<nil>
+time=2025-09-14T09:25:17.304+02:00 level=INFO msg="eof and exited" service=project.run updateID=fe66b8e3254f1fa2cb615cfe eofs=0
+time=2025-09-14T09:25:17.304+02:00 level=INFO msg="eof and exited" service=project.run updateID=fe66b8e3254f1fa2cb615cfe eofs=1
+time=2025-09-14T09:25:17.304+02:00 level=INFO msg="breaking out of tail loop" service=project.run updateID=fe66b8e3254f1fa2cb615cfe
+time=2025-09-14T09:25:17.304+02:00 level=INFO msg="parsing state" service=project.run updateID=fe66b8e3254f1fa2cb615cfe
+time=2025-09-14T09:25:17.304+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e3254f1fa2cb615cfe"
+time=2025-09-14T09:25:17.430+02:00 level=INFO msg="generating types" root=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev
+time=2025-09-14T09:25:17.431+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=CHMOD
+time=2025-09-14T09:25:17.431+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=WRITE
+time=2025-09-14T09:25:17.431+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=WRITE
+time=2025-09-14T09:25:17.431+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts
+time=2025-09-14T09:25:17.431+02:00 level=INFO msg="canceling partial" service=project.run updateID=fe66b8e3254f1fa2cb615cfe
+time=2025-09-14T09:25:17.431+02:00 level=INFO msg="waiting for partial to exit" service=project.run updateID=fe66b8e3254f1fa2cb615cfe
+time=2025-09-14T09:25:18.270+02:00 level=INFO msg="INFO pushing snapshot updateID=fe66b8e3254f1fa2cb615cfe"
+time=2025-09-14T09:25:18.270+02:00 level=INFO msg="INFO pushing eventlog updateID=fe66b8e3254f1fa2cb615cfe"
+time=2025-09-14T09:25:18.957+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=CHMOD
+time=2025-09-14T09:25:19.503+02:00 level=INFO msg="INFO putting update app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:25:20.287+02:00 level=INFO msg="done running stack command" service=project.run updateID=fe66b8e3254f1fa2cb615cfe resources=11
+time=2025-09-14T09:25:20.300+02:00 level=INFO msg="INFO unlocking app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:25:21.042+02:00 level=ERROR msg="stack deploy error" service=deployer error="stack run had errors"
+time=2025-09-14T09:25:21.043+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T09:25:21.043+02:00 level=INFO msg="build hash" service=deployer hash=3RVG1MwLH3M
+time=2025-09-14T09:25:21.043+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T09:25:21.043+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T09:26:00.692+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"
+time=2025-09-14T09:26:53.554+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst.config.ts op=CHMOD
+time=2025-09-14T09:26:53.556+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst.config.ts op=WRITE
+time=2025-09-14T09:26:53.556+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst.config.ts
+time=2025-09-14T09:26:53.556+02:00 level=INFO msg=deploying service=deployer
+time=2025-09-14T09:26:53.556+02:00 level=INFO msg="running stack command" service=project.run cmd=deploy
+time=2025-09-14T09:26:53.557+02:00 level=INFO msg="INFO locking app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:26:53.557+02:00 level=INFO msg="INFO getting data key=lock app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:26:55.050+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst.config.ts op=CHMOD
+time=2025-09-14T09:26:55.224+02:00 level=INFO msg="INFO putting update app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:26:56.139+02:00 level=INFO msg="INFO getting passphrase app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:26:57.338+02:00 level=INFO msg="INFO pulling state app=budget-dev stage=alexanderfitterling out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/pulumi/fe66b8e15f8ab19afcc22325/.pulumi/stacks/budget-dev/alexanderfitterling.json"
+time=2025-09-14T09:26:58.111+02:00 level=INFO msg="got previous deployment" service=project.run updateID=fe66b8e15f8ab19afcc22325
+time=2025-09-14T09:26:58.112+02:00 level=INFO msg="esbuild building" out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757834817337.mjs
+time=2025-09-14T09:26:58.167+02:00 level=INFO msg="esbuild built" outfile=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757834817337.mjs
+time=2025-09-14T09:26:58.173+02:00 level=INFO msg="built sst.config.ts" service=project.run updateID=fe66b8e15f8ab19afcc22325 to=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757834817337.mjs
+time=2025-09-14T09:26:58.177+02:00 level=INFO msg="tracked files" service=project.run updateID=fe66b8e15f8ab19afcc22325
+time=2025-09-14T09:26:58.177+02:00 level=INFO msg="INFO getting data key=secret app=budget-dev stage=_fallback"
+time=2025-09-14T09:26:58.177+02:00 level=INFO msg="INFO getting data key=secret app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:26:59.077+02:00 level=INFO msg="starting pulumi" service=project.run updateID=fe66b8e15f8ab19afcc22325 args="[/Users/alexanderfitterling/Library/Application Support/sst/bin/pulumi up --yes -f --stack organization/budget-dev/alexanderfitterling --non-interactive --event-log /Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/pulumi/fe66b8e15f8ab19afcc22325/eventlog.json --config aws:defaultTags={\"tags\":{\"sst:app\":\"budget-dev\",\"sst:stage\":\"alexanderfitterling\"}} --config aws:region=eu-central-1]"
+time=2025-09-14T09:26:59.774+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst.config.ts op=WRITE|CHMOD
+time=2025-09-14T09:26:59.775+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst.config.ts
+time=2025-09-14T09:27:00.685+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"
+time=2025-09-14T09:27:01.135+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst.config.ts op=CHMOD
+time=2025-09-14T09:27:04.079+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e15f8ab19afcc22325"
+time=2025-09-14T09:27:10.177+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e15f8ab19afcc22325"
+time=2025-09-14T09:27:11.330+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e15f8ab19afcc22325"
+time=2025-09-14T09:27:12.355+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e15f8ab19afcc22325"
+time=2025-09-14T09:27:13.618+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e15f8ab19afcc22325"
+time=2025-09-14T09:27:14.047+02:00 level=INFO msg="pulumi exited" service=project.run updateID=fe66b8e15f8ab19afcc22325 err=<nil>
+time=2025-09-14T09:27:14.047+02:00 level=INFO msg="eof and exited" service=project.run updateID=fe66b8e15f8ab19afcc22325 eofs=0
+time=2025-09-14T09:27:14.047+02:00 level=INFO msg="eof and exited" service=project.run updateID=fe66b8e15f8ab19afcc22325 eofs=1
+time=2025-09-14T09:27:14.047+02:00 level=INFO msg="breaking out of tail loop" service=project.run updateID=fe66b8e15f8ab19afcc22325
+time=2025-09-14T09:27:14.047+02:00 level=INFO msg="parsing state" service=project.run updateID=fe66b8e15f8ab19afcc22325
+time=2025-09-14T09:27:14.213+02:00 level=INFO msg="generating types" root=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev
+time=2025-09-14T09:27:14.214+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=CHMOD
+time=2025-09-14T09:27:14.215+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=WRITE
+time=2025-09-14T09:27:14.215+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=WRITE
+time=2025-09-14T09:27:14.215+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts
+time=2025-09-14T09:27:14.215+02:00 level=INFO msg="canceling partial" service=project.run updateID=fe66b8e15f8ab19afcc22325
+time=2025-09-14T09:27:14.215+02:00 level=INFO msg="waiting for partial to exit" service=project.run updateID=fe66b8e15f8ab19afcc22325
+time=2025-09-14T09:27:14.878+02:00 level=INFO msg="INFO pushing snapshot updateID=fe66b8e15f8ab19afcc22325"
+time=2025-09-14T09:27:14.878+02:00 level=INFO msg="INFO pushing eventlog updateID=fe66b8e15f8ab19afcc22325"
+time=2025-09-14T09:27:14.878+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e15f8ab19afcc22325"
+time=2025-09-14T09:27:15.555+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=CHMOD
+time=2025-09-14T09:27:16.375+02:00 level=INFO msg="INFO putting update app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:27:17.204+02:00 level=INFO msg="done running stack command" service=project.run updateID=fe66b8e15f8ab19afcc22325 resources=18
+time=2025-09-14T09:27:17.217+02:00 level=INFO msg="INFO unlocking app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:27:17.986+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T09:27:17.987+02:00 level=INFO msg="build hash" service=deployer hash=fSp8yEFVSYI
+time=2025-09-14T09:27:17.987+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T09:27:17.987+02:00 level=INFO msg=deploying service=deployer
+time=2025-09-14T09:27:17.987+02:00 level=INFO msg="running stack command" service=project.run cmd=deploy
+time=2025-09-14T09:27:17.987+02:00 level=INFO msg="INFO locking app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:27:17.987+02:00 level=INFO msg="INFO getting data key=lock app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:27:19.523+02:00 level=INFO msg="INFO putting update app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:27:20.276+02:00 level=INFO msg="INFO getting passphrase app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:27:21.291+02:00 level=INFO msg="INFO pulling state app=budget-dev stage=alexanderfitterling out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/pulumi/fe66b8e1001c8e5a27097a8b/.pulumi/stacks/budget-dev/alexanderfitterling.json"
+time=2025-09-14T09:27:22.289+02:00 level=INFO msg="got previous deployment" service=project.run updateID=fe66b8e1001c8e5a27097a8b
+time=2025-09-14T09:27:22.290+02:00 level=INFO msg="esbuild building" out=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757834841289.mjs
+time=2025-09-14T09:27:22.353+02:00 level=INFO msg="esbuild built" outfile=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757834841289.mjs
+time=2025-09-14T09:27:22.359+02:00 level=INFO msg="built sst.config.ts" service=project.run updateID=fe66b8e1001c8e5a27097a8b to=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/platform/sst.config.1757834841289.mjs
+time=2025-09-14T09:27:22.363+02:00 level=INFO msg="tracked files" service=project.run updateID=fe66b8e1001c8e5a27097a8b
+time=2025-09-14T09:27:22.363+02:00 level=INFO msg="INFO getting data key=secret app=budget-dev stage=_fallback"
+time=2025-09-14T09:27:22.363+02:00 level=INFO msg="INFO getting data key=secret app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:27:23.205+02:00 level=INFO msg="starting pulumi" service=project.run updateID=fe66b8e1001c8e5a27097a8b args="[/Users/alexanderfitterling/Library/Application Support/sst/bin/pulumi up --yes -f --stack organization/budget-dev/alexanderfitterling --non-interactive --event-log /Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.sst/pulumi/fe66b8e1001c8e5a27097a8b/eventlog.json --config aws:defaultTags={\"tags\":{\"sst:app\":\"budget-dev\",\"sst:stage\":\"alexanderfitterling\"}} --config aws:region=eu-central-1]"
+time=2025-09-14T09:27:28.207+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e1001c8e5a27097a8b"
+time=2025-09-14T09:27:32.776+02:00 level=INFO msg="pulumi exited" service=project.run updateID=fe66b8e1001c8e5a27097a8b err=<nil>
+time=2025-09-14T09:27:32.776+02:00 level=INFO msg="eof and exited" service=project.run updateID=fe66b8e1001c8e5a27097a8b eofs=0
+time=2025-09-14T09:27:32.776+02:00 level=INFO msg="eof and exited" service=project.run updateID=fe66b8e1001c8e5a27097a8b eofs=1
+time=2025-09-14T09:27:32.776+02:00 level=INFO msg="breaking out of tail loop" service=project.run updateID=fe66b8e1001c8e5a27097a8b
+time=2025-09-14T09:27:32.776+02:00 level=INFO msg="parsing state" service=project.run updateID=fe66b8e1001c8e5a27097a8b
+time=2025-09-14T09:27:32.776+02:00 level=INFO msg="INFO pushing partial state updateID=fe66b8e1001c8e5a27097a8b"
+time=2025-09-14T09:27:32.898+02:00 level=INFO msg="generating types" root=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev
+time=2025-09-14T09:27:32.899+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=CHMOD
+time=2025-09-14T09:27:32.899+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=WRITE
+time=2025-09-14T09:27:32.899+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=WRITE
+time=2025-09-14T09:27:32.899+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts
+time=2025-09-14T09:27:32.899+02:00 level=INFO msg="canceling partial" service=project.run updateID=fe66b8e1001c8e5a27097a8b
+time=2025-09-14T09:27:32.899+02:00 level=INFO msg="waiting for partial to exit" service=project.run updateID=fe66b8e1001c8e5a27097a8b
+time=2025-09-14T09:27:34.108+02:00 level=INFO msg="INFO pushing snapshot updateID=fe66b8e1001c8e5a27097a8b"
+time=2025-09-14T09:27:34.109+02:00 level=INFO msg="INFO pushing eventlog updateID=fe66b8e1001c8e5a27097a8b"
+time=2025-09-14T09:27:34.708+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/sst-env.d.ts op=CHMOD
+time=2025-09-14T09:27:35.590+02:00 level=INFO msg="INFO putting update app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:27:36.439+02:00 level=INFO msg="done running stack command" service=project.run updateID=fe66b8e1001c8e5a27097a8b resources=18
+time=2025-09-14T09:27:36.455+02:00 level=INFO msg="INFO unlocking app=budget-dev stage=alexanderfitterling"
+time=2025-09-14T09:27:37.248+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T09:27:37.248+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T09:27:37.248+02:00 level=INFO msg="build hash" service=deployer hash=fSp8yEFVSYI
+time=2025-09-14T09:27:37.248+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T09:27:37.248+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T09:28:00.684+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"

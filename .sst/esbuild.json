@@ -1,5 +1,5 @@
 
-  .sst/platform/sst.config.1757833804099.mjs ────────────────────────────────────── 714.7kb ─ 100.0%
+  .sst/platform/sst.config.1757834841289.mjs ────────────────────────────────────── 714.9kb ─ 100.0%
    ├ .sst/platform/src/components/aws/router.ts ──────────────────────────────────── 34.9kb ─── 4.9%
    │  └ .sst/platform/src/components/aws/index.ts
    │     └ .sst/platform/src/components/index.ts
@@ -48,7 +48,7 @@
    │     └ .sst/platform/src/components/index.ts
    │        └ sst.config.ts
    │           └ eval.ts
-   ├ .sst/platform/src/components/aws/aurora.ts ──────────────────────────────────── 18.0kb ─── 2.5%
+   ├ .sst/platform/src/components/aws/aurora.ts ──────────────────────────────────── 18.1kb ─── 2.5%
    │  └ .sst/platform/src/components/aws/index.ts
    │     └ .sst/platform/src/components/index.ts
    │        └ sst.config.ts
@@ -79,13 +79,13 @@
    │     └ .sst/platform/src/components/index.ts
    │        └ sst.config.ts
    │           └ eval.ts
-   ├ .sst/platform/src/components/component.ts ───────────────────────────────────── 14.6kb ─── 2.0%
-   │  └ .sst/platform/src/components/linkable.ts
+   ├ .sst/platform/src/components/aws/mysql.ts ───────────────────────────────────── 14.6kb ─── 2.0%
+   │  └ .sst/platform/src/components/aws/index.ts
    │     └ .sst/platform/src/components/index.ts
    │        └ sst.config.ts
    │           └ eval.ts
-   ├ .sst/platform/src/components/aws/mysql.ts ───────────────────────────────────── 14.6kb ─── 2.0%
-   │  └ .sst/platform/src/components/aws/index.ts
+   ├ .sst/platform/src/components/component.ts ───────────────────────────────────── 14.6kb ─── 2.0%
+   │  └ .sst/platform/src/components/linkable.ts
    │     └ .sst/platform/src/components/index.ts
    │        └ sst.config.ts
    │           └ eval.ts
@@ -120,7 +120,7 @@
    │     └ .sst/platform/src/components/index.ts
    │        └ sst.config.ts
    │           └ eval.ts
-   ├ .sst/platform/src/components/aws/open-search.ts ──────────────────────────────── 8.3kb ─── 1.2%
+   ├ .sst/platform/src/components/aws/open-search.ts ──────────────────────────────── 8.4kb ─── 1.2%
    │  └ .sst/platform/src/components/aws/index.ts
    │     └ .sst/platform/src/components/index.ts
    │        └ sst.config.ts
@@ -456,8 +456,6 @@
    │     └ .sst/platform/src/components/index.ts
    │        └ sst.config.ts
    │           └ eval.ts
-   ├ sst.config.ts ────────────────────────────────────────────────────────────────── 1.7kb ─── 0.2%
-   │  └ eval.ts
    ├ .sst/platform/src/components/aws/apigatewayv1-integration-route.ts ───────────── 1.6kb ─── 0.2%
    │  └ .sst/platform/src/components/aws/apigatewayv1.ts
    │     └ .sst/platform/src/components/aws/index.ts
@@ -481,6 +479,8 @@
    │        └ .sst/platform/src/components/index.ts
    │           └ sst.config.ts
    │              └ eval.ts
+   ├ sst.config.ts ────────────────────────────────────────────────────────────────── 1.5kb ─── 0.2%
+   │  └ eval.ts
    ├ .sst/platform/src/components/aws/bus-queue-subscriber.ts ─────────────────────── 1.5kb ─── 0.2%
    │  └ .sst/platform/src/components/aws/bus.ts
    │     └ .sst/platform/src/components/aws/index.ts
@@ -634,7 +634,7 @@
    │        └ .sst/platform/src/components/index.ts
    │           └ sst.config.ts
    │              └ eval.ts
-   ├ <define:$cli> ────────────────────────────────────────────────────────────────── 532b ──── 0.1%
+   ├ <define:$cli> ────────────────────────────────────────────────────────────────── 500b ──── 0.1%
    │  └ eval.ts
    ├ .sst/platform/src/components/aws/helpers/subscriber.ts ───────────────────────── 493b ──── 0.1%
    │  └ .sst/platform/src/components/aws/sns-topic.ts
