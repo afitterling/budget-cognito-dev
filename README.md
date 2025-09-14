@@ -4,6 +4,8 @@ A Cognito Identity Pool setup in SST — useful when you just want to share the 
 To use in your consumer / api / client:
 
 For threat modeling, everything has to be protected. The idea here is to split the idendity pool from any consumer.
+You can replace the identity pool at any time. 
+
 Follow does an example on how to integrate into your API / Client with AWS SSM Parameter.
 
 ```JS
@@ -40,3 +42,7 @@ Follow does an example on how to integrate into your API / Client with AWS SSM P
     }, { auth });
 
 ```
+
+## user relatedness
+
+We are currently using sub as uuid. There are several more save examples as login + audit place a crucial role. See the full content of your access token or identity token for review.
