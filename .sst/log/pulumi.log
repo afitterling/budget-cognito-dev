@@ -4,40 +4,71 @@ Updating (alexanderfitterling):
 @ updating....
     pulumi:pulumi:Stack budget-dev-alexanderfitterling running warning: using pulumi-language-nodejs from $PATH at /opt/homebrew/bin/pulumi-language-nodejs
 @ updating..........
-    aws:ssm:Parameter CognitoUserPoolIdParam  warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
-    aws:ssm:Parameter CognitoUserPoolIdParam  warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
     aws:ssm:Parameter CognitoUserPoolArnParam  warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolArnParam verification warning: this attribute has been deprecated
     aws:ssm:Parameter CognitoUserPoolArnParam  warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolArnParam verification warning: this attribute has been deprecated
+ -- aws:ssm:Parameter CognitoUserPoolArnParam deleting original (0s) warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolArnParam verification warning: this attribute has been deprecated
+    aws:ssm:Parameter CognitoUserPoolIdParam  warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
+    aws:ssm:Parameter CognitoUserPoolIdParam  warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
+ -- aws:ssm:Parameter CognitoUserPoolIdParam deleting original (0s) warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
     aws:ssm:Parameter CognitoClientIdParam  warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoClientIdParam verification warning: this attribute has been deprecated
     aws:ssm:Parameter CognitoClientIdParam  warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoClientIdParam verification warning: this attribute has been deprecated
+ -- aws:ssm:Parameter CognitoClientIdParam deleting original (0s) warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoClientIdParam verification warning: this attribute has been deprecated
     aws:ssm:Parameter CognitoIdentityPoolIdParam  warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoIdentityPoolIdParam verification warning: this attribute has been deprecated
     aws:ssm:Parameter CognitoIdentityPoolIdParam  warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoIdentityPoolIdParam verification warning: this attribute has been deprecated
+ -- aws:ssm:Parameter CognitoIdentityPoolIdParam deleting original (0s) warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoIdentityPoolIdParam verification warning: this attribute has been deprecated
 @ updating....
+ -- aws:ssm:Parameter CognitoUserPoolArnParam deleted original (0.99s) warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolArnParam verification warning: this attribute has been deprecated
+ +- aws:ssm:Parameter CognitoUserPoolArnParam replacing (0s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolArnParam verification warning: this attribute has been deprecated
+ +- aws:ssm:Parameter CognitoUserPoolArnParam replaced (0.00s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolArnParam verification warning: this attribute has been deprecated
+ ++ aws:ssm:Parameter CognitoUserPoolArnParam creating replacement (0s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolArnParam verification warning: this attribute has been deprecated
+ -- aws:ssm:Parameter CognitoUserPoolIdParam deleted original (1s) warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
+ +- aws:ssm:Parameter CognitoUserPoolIdParam replacing (0s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
+ +- aws:ssm:Parameter CognitoUserPoolIdParam replaced (0.00s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
+ ++ aws:ssm:Parameter CognitoUserPoolIdParam creating replacement (0s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
+ -- aws:ssm:Parameter CognitoIdentityPoolIdParam deleted original (1s) warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoIdentityPoolIdParam verification warning: this attribute has been deprecated
+ +- aws:ssm:Parameter CognitoIdentityPoolIdParam replacing (0s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoIdentityPoolIdParam verification warning: this attribute has been deprecated
+ +- aws:ssm:Parameter CognitoIdentityPoolIdParam replaced (0.00s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoIdentityPoolIdParam verification warning: this attribute has been deprecated
+ ++ aws:ssm:Parameter CognitoIdentityPoolIdParam creating replacement (0s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoIdentityPoolIdParam verification warning: this attribute has been deprecated
+ -- aws:ssm:Parameter CognitoClientIdParam deleted original (1s) warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoClientIdParam verification warning: this attribute has been deprecated
+ +- aws:ssm:Parameter CognitoClientIdParam replacing (0s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoClientIdParam verification warning: this attribute has been deprecated
+ +- aws:ssm:Parameter CognitoClientIdParam replaced (0.00s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoClientIdParam verification warning: this attribute has been deprecated
+ ++ aws:ssm:Parameter CognitoClientIdParam creating replacement (0s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoClientIdParam verification warning: this attribute has been deprecated
+@ updating.....
+ ++ aws:ssm:Parameter CognitoClientIdParam created replacement (1s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoClientIdParam verification warning: this attribute has been deprecated
+ ++ aws:ssm:Parameter CognitoUserPoolArnParam created replacement (1s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolArnParam verification warning: this attribute has been deprecated
+ ++ aws:ssm:Parameter CognitoIdentityPoolIdParam created replacement (1s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoIdentityPoolIdParam verification warning: this attribute has been deprecated
+ ++ aws:ssm:Parameter CognitoUserPoolIdParam created replacement (1s) [diff: ~name]; warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
     pulumi:pulumi:Stack budget-dev-alexanderfitterling  1 warning
 Diagnostics:
-  pulumi:pulumi:Stack (budget-dev-alexanderfitterling):
-    warning: using pulumi-language-nodejs from $PATH at /opt/homebrew/bin/pulumi-language-nodejs
+  aws:ssm:Parameter (CognitoIdentityPoolIdParam):
+    warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoIdentityPoolIdParam verification warning: this attribute has been deprecated
+    warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoIdentityPoolIdParam verification warning: this attribute has been deprecated
 
   aws:ssm:Parameter (CognitoUserPoolArnParam):
     warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolArnParam verification warning: this attribute has been deprecated
-
-  aws:ssm:Parameter (CognitoIdentityPoolIdParam):
-    warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoIdentityPoolIdParam verification warning: this attribute has been deprecated
+    warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolArnParam verification warning: this attribute has been deprecated
 
   aws:ssm:Parameter (CognitoUserPoolIdParam):
+    warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
     warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoUserPoolIdParam verification warning: this attribute has been deprecated
 
   aws:ssm:Parameter (CognitoClientIdParam):
     warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoClientIdParam verification warning: this attribute has been deprecated
+    warning: urn:pulumi:alexanderfitterling::budget-dev::aws:ssm/parameter:Parameter::CognitoClientIdParam verification warning: this attribute has been deprecated
+
+  pulumi:pulumi:Stack (budget-dev-alexanderfitterling):
+    warning: using pulumi-language-nodejs from $PATH at /opt/homebrew/bin/pulumi-language-nodejs
 
 Outputs:
-    Client      : "4pdb2snh21k1m876vdtnqdl8b4"
+    Client      : "7itoqn07fgrmhosr423dcq8fi7"
     IdentityPool: "eu-central-1:1c7f5a3a-a02b-4260-a3d7-6bb7e7cc3cab"
     UserPool    : "eu-central-1_lBH9g2x2D"
     _protect    : false
+  ~ prefix      : "/identity/alexanderfitterling" => "/identity/identity-pool-budget/alexanderfitterling"
 
 Resources:
-    17 unchanged
+    +-4 replaced
+    11 unchanged
 
-Duration: 9s
+Duration: 11s
 

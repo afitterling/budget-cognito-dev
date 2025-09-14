@@ -1,5 +1,5 @@
 
-  .sst/platform/sst.config.1757834841289.mjs ────────────────────────────────────── 714.9kb ─ 100.0%
+  .sst/platform/sst.config.1757836796606.mjs ────────────────────────────────────── 715.2kb ─ 100.0%
    ├ .sst/platform/src/components/aws/router.ts ──────────────────────────────────── 34.9kb ─── 4.9%
    │  └ .sst/platform/src/components/aws/index.ts
    │     └ .sst/platform/src/components/index.ts
@@ -26,7 +26,7 @@
    │     └ .sst/platform/src/components/index.ts
    │        └ sst.config.ts
    │           └ eval.ts
-   ├ .sst/platform/src/components/aws/apigatewayv1.ts ────────────────────────────── 24.7kb ─── 3.5%
+   ├ .sst/platform/src/components/aws/apigatewayv1.ts ────────────────────────────── 24.7kb ─── 3.4%
    │  └ .sst/platform/src/components/aws/index.ts
    │     └ .sst/platform/src/components/index.ts
    │        └ sst.config.ts
@@ -100,7 +100,7 @@
    │        └ .sst/platform/src/components/index.ts
    │           └ sst.config.ts
    │              └ eval.ts
-   ├ .sst/platform/src/components/aws/cognito-user-pool.ts ───────────────────────── 11.1kb ─── 1.6%
+   ├ .sst/platform/src/components/aws/cognito-user-pool.ts ───────────────────────── 11.1kb ─── 1.5%
    │  └ .sst/platform/src/components/aws/index.ts
    │     └ .sst/platform/src/components/index.ts
    │        └ sst.config.ts
@@ -428,6 +428,8 @@
    │              └ eval.ts
    ├ .sst/platform/src/auto/run.ts ────────────────────────────────────────────────── 1.9kb ─── 0.3%
    │  └ eval.ts
+   ├ sst.config.ts ────────────────────────────────────────────────────────────────── 1.9kb ─── 0.3%
+   │  └ eval.ts
    ├ .sst/platform/src/components/aws/cognito-user-pool-client.ts ─────────────────── 1.8kb ─── 0.3%
    │  └ .sst/platform/src/components/aws/cognito-user-pool.ts
    │     └ .sst/platform/src/components/aws/index.ts
@@ -479,8 +481,6 @@
    │        └ .sst/platform/src/components/index.ts
    │           └ sst.config.ts
    │              └ eval.ts
-   ├ sst.config.ts ────────────────────────────────────────────────────────────────── 1.5kb ─── 0.2%
-   │  └ eval.ts
    ├ .sst/platform/src/components/aws/bus-queue-subscriber.ts ─────────────────────── 1.5kb ─── 0.2%
    │  └ .sst/platform/src/components/aws/bus.ts
    │     └ .sst/platform/src/components/aws/index.ts
@@ -634,8 +634,6 @@
    │        └ .sst/platform/src/components/index.ts
    │           └ sst.config.ts
    │              └ eval.ts
-   ├ <define:$cli> ────────────────────────────────────────────────────────────────── 500b ──── 0.1%
-   │  └ eval.ts
    ├ .sst/platform/src/components/aws/helpers/subscriber.ts ───────────────────────── 493b ──── 0.1%
    │  └ .sst/platform/src/components/aws/sns-topic.ts
    │     └ .sst/platform/src/components/aws/index.ts
@@ -656,6 +654,8 @@
    │              └ .sst/platform/src/components/index.ts
    │                 └ sst.config.ts
    │                    └ eval.ts
+   ├ <define:$cli> ────────────────────────────────────────────────────────────────── 477b ──── 0.1%
+   │  └ eval.ts
    ├ .sst/platform/src/components/aws/linkable.ts ─────────────────────────────────── 433b ──── 0.1%
    │  └ .sst/platform/src/components/aws/index.ts
    │     └ .sst/platform/src/components/index.ts

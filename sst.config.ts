@@ -20,16 +20,27 @@ export default $config({
       },
     } */);
 
+    const userPoolClient = new aws.cognito.UserPoolClient("MyUserPoolClient", {
+      userPoolId: userPool.id,
+      generateSecret: false, // must be false for USER_PASSWORD_AUTH
+      explicitAuthFlows: [
+        "ALLOW_USER_PASSWORD_AUTH",
+        "ALLOW_REFRESH_TOKEN_AUTH",
+        "ALLOW_USER_SRP_AUTH",
+      ],
+    });
+
     // 2) User Pool Client with password & refresh flows
-    const client = userPool.addClient("Web");
+    //const client = userPool.addClient("Web",);
 
     // 3) Identity Pool
     const identityPool = new sst.aws.CognitoIdentityPool("MyIdentityPool", {
-      userPools: [{ userPool: userPool.id, client: client.id }],
+      userPools: [{ userPool: userPool.id, client: userPoolClient.id }],
     });
 
     // 4) SSM prefix per app/stage
-    const prefix = `/identity/${$app.name}/${$app.stage}`;
+    //const prefix = `/identity/${$app.name}/${$app.stage}`;
+    const prefix = `/identity/identity-pool-budget/${$app.stage}`;
 
     // 5) Write parameters to SSM
     new aws.ssm.Parameter("CognitoUserPoolIdParam", {
@@ -49,7 +60,7 @@ export default $config({
     new aws.ssm.Parameter("CognitoClientIdParam", {
       name: `${prefix}/COGNITO_CLIENT_ID`,
       type: "String",
-      value: client.id,
+      value: userPoolClient.id,
       overwrite: true,
     });
 
@@ -64,8 +75,9 @@ export default $config({
 
     // 6) Return for console visibility
     return {
+      prefix,
       UserPool: userPool.id,
-      Client: client.id,
+      Client: userPoolClient.id,
       IdentityPool: identityPool.id,
     };
   },
