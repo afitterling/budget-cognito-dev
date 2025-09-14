@@ -348,3 +348,4 @@ time=2025-09-14T10:07:34.394+02:00 level=INFO msg="file event" service=watcher p
 time=2025-09-14T10:07:34.394+02:00 level=INFO msg="waiting for trigger" service=deployer
 time=2025-09-14T10:07:34.394+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/README.md
 time=2025-09-14T10:07:35.888+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/README.md op=CHMOD
+time=2025-09-14T10:08:03.227+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"
