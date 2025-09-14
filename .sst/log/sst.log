@@ -306,3 +306,45 @@ time=2025-09-14T10:00:14.734+02:00 level=INFO msg="waiting for trigger" service=
 time=2025-09-14T10:01:03.242+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"
 time=2025-09-14T10:02:03.281+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"
 time=2025-09-14T10:03:03.287+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"
+time=2025-09-14T10:04:03.242+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"
+time=2025-09-14T10:04:12.678+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.git/HEAD op=REMOVE
+time=2025-09-14T10:04:12.678+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.git/HEAD op=CREATE
+time=2025-09-14T10:04:12.679+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.git/HEAD
+time=2025-09-14T10:04:12.679+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T10:05:03.275+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"
+time=2025-09-14T10:05:05.544+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.README.md.swp op=CREATE
+time=2025-09-14T10:05:05.545+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T10:05:05.545+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.README.md.swp
+time=2025-09-14T10:05:07.416+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.README.md.swp op=WRITE
+time=2025-09-14T10:05:07.416+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.README.md.swp
+time=2025-09-14T10:05:07.416+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T10:05:38.385+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/README.md op=CREATE
+time=2025-09-14T10:05:38.388+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T10:05:38.388+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/README.md
+time=2025-09-14T10:05:38.397+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.README.md.swp op=WRITE
+time=2025-09-14T10:05:38.398+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T10:05:38.398+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.README.md.swp
+time=2025-09-14T10:05:38.403+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/.README.md.swp op=REMOVE
+time=2025-09-14T10:05:40.362+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/README.md op=CHMOD
+time=2025-09-14T10:06:03.247+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"
+time=2025-09-14T10:06:13.489+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js op=CHMOD
+time=2025-09-14T10:06:13.490+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js op=WRITE
+time=2025-09-14T10:06:13.490+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js
+time=2025-09-14T10:06:13.491+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T10:06:16.198+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js op=CHMOD
+time=2025-09-14T10:06:35.665+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js op=CHMOD
+time=2025-09-14T10:06:35.666+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js op=WRITE
+time=2025-09-14T10:06:35.667+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js
+time=2025-09-14T10:06:35.667+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T10:06:37.499+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js op=CHMOD
+time=2025-09-14T10:06:46.270+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js op=CHMOD
+time=2025-09-14T10:06:46.271+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js op=WRITE
+time=2025-09-14T10:06:46.271+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js
+time=2025-09-14T10:06:46.271+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T10:06:47.521+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/tools/newUser.js op=CHMOD
+time=2025-09-14T10:07:03.241+02:00 level=INFO msg="INFO msg service=appsync.connection type=ka id=<nil>"
+time=2025-09-14T10:07:34.393+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/README.md op=CHMOD
+time=2025-09-14T10:07:34.394+02:00 level=INFO msg="file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/README.md op=WRITE
+time=2025-09-14T10:07:34.394+02:00 level=INFO msg="waiting for trigger" service=deployer
+time=2025-09-14T10:07:34.394+02:00 level=INFO msg="checking if code needs to be rebuilt" service=aws.function file=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/README.md
+time=2025-09-14T10:07:35.888+02:00 level=INFO msg="ignoring file event" service=watcher path=/Users/alexanderfitterling/dev/auth-pools/budget-cognito-dev/README.md op=CHMOD
