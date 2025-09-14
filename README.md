@@ -7,8 +7,9 @@ For threat modeling, everything has to be protected. The idea here is to split t
 You can replace the identity pool at any time. 
 
 Follow does an example on how to integrate into your API / Client with AWS SSM Parameter.
-- The ID provider shares among stage
-- The consumers can pick it up - if integrated into that SST stage
+- The ID provider publishes its data with parameter on its SST stage
+- The consumers can pick it up - if integrated into this very SST stage. To adapt change the prefix.
+
 
 ```JS
     const prefix = `/identity/identity-pool-budget/${$app.stage}`;
