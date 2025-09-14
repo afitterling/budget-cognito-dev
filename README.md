@@ -1,8 +1,9 @@
 # A Versatile AWS Cognito Identity Pool in SST
 
 A minimal Cognito Identity Pool setup in SST — useful when you just want to share the same identity across several stacks or apps.
+To use in your consumer / api / client:
 
-```
+```JS
     const prefix = `/identity/identity-pool-budget/${$app.stage}`;
 
     // Read SSM parameters (outputs resolve to Pulumi outputs)
