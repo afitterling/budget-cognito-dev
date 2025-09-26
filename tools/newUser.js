@@ -10,11 +10,11 @@ const client = new CognitoIdentityProviderClient({});
 async function createUser() {
     const command = new AdminCreateUserCommand({
         UserPoolId: process.env.USER_POOL_ID,
-        Username: "newuser@example.com",
-        TemporaryPassword: process.env.password, // must meet Cognito password policy
+        Username: process.env.USER_EMAIL,
+        TemporaryPassword: process.env.PASSWORD, // must meet Cognito password policy
         MessageAction: "SUPPRESS", // don't send invitation email
         UserAttributes: [
-            { Name: "email", Value: "newuser@example.com" },
+            { Name: "email", Value: process.env.USER_EMAIL },
             { Name: "email_verified", Value: "true" },
         ],
     });
@@ -28,8 +28,8 @@ createUser().catch(console.error);
 async function setPassword() {
     const command = new AdminSetUserPasswordCommand({
         UserPoolId: process.env.USER_POOL_ID,
-        Username: "newuser@example.com",
-        Password: process.env.password,
+        Username: process.env.USER_EMAIL,
+        Password: process.env.PASSWORD,
         Permanent: true, // prevents requiring reset on first login
     });
     await client.send(command);

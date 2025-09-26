@@ -28,6 +28,9 @@ export default $config({
         "ALLOW_REFRESH_TOKEN_AUTH",
         "ALLOW_USER_SRP_AUTH",
       ],
+      //allowedOauthFlows: ["password"],
+      //allowedOAuthScopes: ["openid", "email", "profile"],
+      supportedIdentityProviders: ["COGNITO"],
     });
 
     // 2) User Pool Client with password & refresh flows
@@ -36,6 +39,11 @@ export default $config({
     // 3) Identity Pool
     const identityPool = new sst.aws.CognitoIdentityPool("MyIdentityPool", {
       userPools: [{ userPool: userPool.id, client: userPoolClient.id }],
+    });
+    // optional domain
+    const domain = new aws.cognito.UserPoolDomain("UserPoolDomain", {
+      domain: `identity-pool-budget-${$app.stage}`,
+      userPoolId: userPool.id,
     });
 
     // 4) SSM prefix per app/stage
@@ -79,6 +87,7 @@ export default $config({
       UserPool: userPool.id,
       Client: userPoolClient.id,
       IdentityPool: identityPool.id,
+      domain: domain.domain
     };
   },
 });
