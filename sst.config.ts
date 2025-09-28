@@ -4,7 +4,7 @@
 export default $config({
   app(input) {
     return {
-      name: "budget-dev",
+      name: "identity-pool",
       home: "aws",
       removal: input?.stage === "production" ? "retain" : "remove",
     };
