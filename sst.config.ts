@@ -1,6 +1,5 @@
 /// <reference path="./.sst/platform/config.d.ts" />
 
-
 export default $config({
   app(input) {
     return {
@@ -31,6 +30,14 @@ export default $config({
       //allowedOauthFlows: ["password"],
       //allowedOAuthScopes: ["openid", "email", "profile"],
       supportedIdentityProviders: ["COGNITO"],
+      tokenValidityUnits: {
+        accessToken: "minutes",
+        idToken: "hours",
+        refreshToken: "hours",
+      },
+      accessTokenValidity: 5,
+      idTokenValidity: 1,
+      refreshTokenValidity: 1
     });
 
     // 2) User Pool Client with password & refresh flows
@@ -83,11 +90,12 @@ export default $config({
 
     // 6) Return for console visibility
     return {
-      prefix,
+      SSMPrefix: prefix,
       UserPool: userPool.id,
       Client: userPoolClient.id,
       IdentityPool: identityPool.id,
-      domain: domain.domain
+      Domain: domain.domain,
+      //url: `https://STAGE.auth.${REGION}.amazoncognito.com/oauth2/token`
     };
   },
 });
