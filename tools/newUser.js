@@ -22,6 +22,7 @@ async function createUser() {
 
         await client.send(command);
         console.log("✅ User created");
+        console.log("re-run to set password!")
     } catch (e) {
         console.log("error occured", e.message);
     }
@@ -30,14 +31,18 @@ async function createUser() {
 createUser().catch(console.error);
 
 async function setPassword() {
-    const command = new AdminSetUserPasswordCommand({
-        UserPoolId: process.env.USER_POOL_ID,
-        Username: process.env.USER_EMAIL,
-        Password: process.env.PASSWORD,
-        Permanent: true, // prevents requiring reset on first login
-    });
-    await client.send(command);
-    console.log("Password set!");
+    try {
+        const command = new AdminSetUserPasswordCommand({
+            UserPoolId: process.env.USER_POOL_ID,
+            Username: process.env.USER_EMAIL,
+            Password: process.env.PASSWORD,
+            Permanent: true, // prevents requiring reset on first login
+        });
+        await client.send(command);
+        console.log("Password set!");
+    } catch (e) {
+        console.log("error", e.message);
+    }
 }
 
 setPassword();
