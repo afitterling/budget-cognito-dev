@@ -36,8 +36,8 @@ export default $config({
         refreshToken: "hours",
       },
       accessTokenValidity: 5,
-      idTokenValidity: 1,
-      refreshTokenValidity: 1
+      idTokenValidity: 24,
+      refreshTokenValidity: 24
     });
 
     // 2) User Pool Client with password & refresh flows
