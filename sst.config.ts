@@ -11,13 +11,16 @@ export default $config({
 
   async run() {
     // 1) Cognito User Pool
-    const userPool = new sst.aws.CognitoUserPool("MyUserPool", /* {
-      triggers: {
-        preSignUp: {
-          handler: "functions/preSignUp.main",
+    const userPool = new sst.aws.CognitoUserPool("MyUserPool", {
+      transform: {
+        userPool: {
+          autoVerifiedAttributes: ["email"],
+          verificationMessageTemplate: {
+            defaultEmailOption: "CONFIRM_WITH_CODE",
+          },
         },
       },
-    } */);
+    });
 
     const userPoolClient = new aws.cognito.UserPoolClient("MyUserPoolClient", {
       userPoolId: userPool.id,
