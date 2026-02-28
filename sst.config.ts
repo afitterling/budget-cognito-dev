@@ -30,8 +30,6 @@ export default $config({
         "ALLOW_REFRESH_TOKEN_AUTH",
         "ALLOW_USER_SRP_AUTH",
       ],
-      //allowedOauthFlows: ["password"],
-      //allowedOAuthScopes: ["openid", "email", "profile"],
       supportedIdentityProviders: ["COGNITO"],
       tokenValidityUnits: {
         accessToken: "minutes",
@@ -92,13 +90,149 @@ export default $config({
     // IdentityPool ARN is optional, safer to skip
 
     // 6) Return for console visibility
+    //return {
+    //  SSMPrefix: prefix,
+    //  UserPool: userPool.id,
+    //  Client: userPoolClient.id,
+    //  IdentityPool: identityPool.id,
+    //  Domain: domain.domain,
+    //  //url: `https://STAGE.auth.${REGION}.amazoncognito.com/oauth2/token`
+    //};
+
+    // WAF Web ACL (REGIONAL, eu-central-1)
+    const waf = new aws.wafv2.WebAcl("FinWiseWAF", {
+      scope: "REGIONAL", // für API Gateway (nicht V2!)
+      defaultAction: { allow: {} },
+      visibilityConfig: {
+        cloudwatchMetricsEnabled: true,
+        metricName: "FinWiseWAF",
+        sampledRequestsEnabled: true,
+      },
+      rules: [
+        // 1. AWS Managed – Common Rule Set (SQLi, XSS, etc.)
+        {
+          name: "AWSManagedCommon",
+          priority: 1,
+          overrideAction: { none: {} },
+          statement: {
+            managedRuleGroupStatement: {
+              vendorName: "AWS",
+              name: "AWSManagedRulesCommonRuleSet",
+            },
+          },
+          visibilityConfig: {
+            cloudwatchMetricsEnabled: true,
+            metricName: "AWSManagedCommon",
+            sampledRequestsEnabled: true,
+          },
+        },
+        // 2. AWS Managed – Known Bad Inputs (Log4j, etc.)
+        {
+          name: "AWSManagedBadInputs",
+          priority: 2,
+          overrideAction: { none: {} },
+          statement: {
+            managedRuleGroupStatement: {
+              vendorName: "AWS",
+              name: "AWSManagedRulesKnownBadInputsRuleSet",
+            },
+          },
+          visibilityConfig: {
+            cloudwatchMetricsEnabled: true,
+            metricName: "AWSManagedBadInputs",
+            sampledRequestsEnabled: true,
+          },
+        },
+        // 3. AWS Managed – IP Reputation (bekannte Angreifer-IPs)
+        {
+          name: "AWSManagedIPReputation",
+          priority: 3,
+          overrideAction: { none: {} },
+          statement: {
+            managedRuleGroupStatement: {
+              vendorName: "AWS",
+              name: "AWSManagedRulesAmazonIpReputationList",
+            },
+          },
+          visibilityConfig: {
+            cloudwatchMetricsEnabled: true,
+            metricName: "AWSManagedIPReputation",
+            sampledRequestsEnabled: true,
+          },
+        },
+        // 4. AWS Managed – Anonymous IP (VPN/TOR)
+        {
+          name: "AWSManagedAnonymousIP",
+          priority: 4,
+          overrideAction: { none: {} },
+          statement: {
+            managedRuleGroupStatement: {
+              vendorName: "AWS",
+              name: "AWSManagedRulesAnonymousIpList",
+            },
+          },
+          visibilityConfig: {
+            cloudwatchMetricsEnabled: true,
+            metricName: "AWSManagedAnonymousIP",
+            sampledRequestsEnabled: true,
+          },
+        },
+        // 5. Rate Limit – Auth Endpunkte (10 req / 5 min)
+        {
+          name: "RateLimitAuth",
+          priority: 5,
+          action: { block: {} },
+          statement: {
+            rateBasedStatement: {
+              limit: 10,
+              aggregateKeyType: "IP",
+              evaluationWindowSec: 300,
+              scopeDownStatement: {
+                byteMatchStatement: {
+                  fieldToMatch: { uriPath: {} },
+                  positionalConstraint: "STARTS_WITH",
+                  searchString: "/api/v1/auth/",
+                  textTransformations: [{ priority: 0, type: "LOWERCASE" }],
+                },
+              },
+            },
+          },
+          visibilityConfig: {
+            cloudwatchMetricsEnabled: true,
+            metricName: "RateLimitAuth",
+            sampledRequestsEnabled: true,
+          },
+        },
+        // 6. Rate Limit – Allgemeine API (1000 req / 5 min)
+        {
+          name: "RateLimitGeneral",
+          priority: 6,
+          action: { block: {} },
+          statement: {
+            rateBasedStatement: {
+              limit: 1000,
+              aggregateKeyType: "IP",
+              evaluationWindowSec: 300,
+            },
+          },
+          visibilityConfig: {
+            cloudwatchMetricsEnabled: true,
+            metricName: "RateLimitGeneral",
+            sampledRequestsEnabled: true,
+          },
+        },
+      ],
+    });
+
+    // ❌ WebAclAssociation entfernt - API Gateway V2 unterstützt WAF nicht direkt
+
     return {
       SSMPrefix: prefix,
       UserPool: userPool.id,
       Client: userPoolClient.id,
       IdentityPool: identityPool.id,
       Domain: domain.domain,
-      //url: `https://STAGE.auth.${REGION}.amazoncognito.com/oauth2/token`
+      WAF: waf.arn,  // ✅ WAF ARN für Monitoring
     };
   },
 });
