@@ -89,6 +89,78 @@ export default $config({
 
     // IdentityPool ARN is optional, safer to skip
 
+    // ── Shared Alerts SNS Topic ───────────────────────────────────────────────
+    const alertsTopic = new aws.sns.Topic("FinwiseAlertsTopic", {
+      displayName: `FinWise Alerts (${$app.stage})`,
+    });
+    new aws.sns.TopicSubscription("AlertsEmailSub", {
+      topic: alertsTopic.arn,
+      protocol: "email",
+      endpoint: "info@sp33c.tech",
+    });
+    // Allow EventBridge to publish to this SNS topic
+    new aws.sns.TopicPolicy("AlertsTopicPolicy", {
+      arn: alertsTopic.arn,
+      policy: alertsTopic.arn.apply(arn => JSON.stringify({
+        Version: "2012-10-17",
+        Statement: [{
+          Effect: "Allow",
+          Principal: { Service: "events.amazonaws.com" },
+          Action: "sns:Publish",
+          Resource: arn,
+        }],
+      })),
+    });
+    // Store ARN in SSM so api1 + api2 stacks can read it
+    new aws.ssm.Parameter("AlertsSnsArnParam", {
+      name: `${prefix}/ALERTS_SNS_ARN`,
+      type: "String",
+      value: alertsTopic.arn,
+      overwrite: true,
+    });
+
+    // ── Cognito: New User Registered ──────────────────────────────────────────
+    const newUserRule = new aws.cloudwatch.EventRule("CognitoNewUserRule", {
+      description: "FinWise: New Cognito user registered or created",
+      eventPattern: JSON.stringify({
+        source: ["aws.cognito-idp"],
+        "detail-type": ["AWS API Call via CloudTrail"],
+        detail: { eventName: ["SignUp", "ConfirmSignUp", "AdminCreateUser"] },
+      }),
+    });
+    new aws.cloudwatch.EventTarget("CognitoNewUserTarget", {
+      rule: newUserRule.name,
+      arn: alertsTopic.arn,
+      inputTransformer: {
+        inputPaths: {
+          eventName: "$.detail.eventName",
+          user: "$.detail.requestParameters.username",
+        },
+        inputTemplate: '"FinWise: New user event [<eventName>] – user: <user>"',
+      },
+    });
+
+    // ── Cognito: User Disabled or Deleted ─────────────────────────────────────
+    const userRemovedRule = new aws.cloudwatch.EventRule("CognitoUserRemovedRule", {
+      description: "FinWise: Cognito user disabled or deleted",
+      eventPattern: JSON.stringify({
+        source: ["aws.cognito-idp"],
+        "detail-type": ["AWS API Call via CloudTrail"],
+        detail: { eventName: ["AdminDisableUser", "AdminDeleteUser", "DeleteUser"] },
+      }),
+    });
+    new aws.cloudwatch.EventTarget("CognitoUserRemovedTarget", {
+      rule: userRemovedRule.name,
+      arn: alertsTopic.arn,
+      inputTransformer: {
+        inputPaths: {
+          eventName: "$.detail.eventName",
+          user: "$.detail.requestParameters.username",
+        },
+        inputTemplate: '"FinWise: User event [<eventName>] – user: <user>"',
+      },
+    });
+
     // 6) Return for console visibility
     //return {
     //  SSMPrefix: prefix,
@@ -105,6 +177,7 @@ export default $config({
       Client: userPoolClient.id,
       IdentityPool: identityPool.id,
       Domain: domain.domain,
+      alertsTopic: alertsTopic.arn,
       waf: "no WAF",
     };
   },
