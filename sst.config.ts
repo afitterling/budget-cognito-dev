@@ -119,47 +119,13 @@ export default $config({
       overwrite: true,
     });
 
-    // ── Cognito: New User Registered ──────────────────────────────────────────
-    const newUserRule = new aws.cloudwatch.EventRule("CognitoNewUserRule", {
-      description: "FinWise: New Cognito user registered or created",
-      eventPattern: JSON.stringify({
-        source: ["aws.cognito-idp"],
-        "detail-type": ["AWS API Call via CloudTrail"],
-        detail: { eventName: ["SignUp", "ConfirmSignUp", "AdminCreateUser"] },
-      }),
-    });
-    new aws.cloudwatch.EventTarget("CognitoNewUserTarget", {
-      rule: newUserRule.name,
-      arn: alertsTopic.arn,
-      inputTransformer: {
-        inputPaths: {
-          eventName: "$.detail.eventName",
-          user: "$.detail.requestParameters.username",
-        },
-        inputTemplate: '"FinWise: New user event [<eventName>] – user: <user>"',
-      },
-    });
-
-    // ── Cognito: User Disabled or Deleted ─────────────────────────────────────
-    const userRemovedRule = new aws.cloudwatch.EventRule("CognitoUserRemovedRule", {
-      description: "FinWise: Cognito user disabled or deleted",
-      eventPattern: JSON.stringify({
-        source: ["aws.cognito-idp"],
-        "detail-type": ["AWS API Call via CloudTrail"],
-        detail: { eventName: ["AdminDisableUser", "AdminDeleteUser", "DeleteUser"] },
-      }),
-    });
-    new aws.cloudwatch.EventTarget("CognitoUserRemovedTarget", {
-      rule: userRemovedRule.name,
-      arn: alertsTopic.arn,
-      inputTransformer: {
-        inputPaths: {
-          eventName: "$.detail.eventName",
-          user: "$.detail.requestParameters.username",
-        },
-        inputTemplate: '"FinWise: User event [<eventName>] – user: <user>"',
-      },
-    });
+    // ── Cognito user-event alerts MOVED OUT ───────────────────────────────────
+    // The CognitoNewUserRule / CognitoUserRemovedRule (+ targets) now live in the
+    // standalone "identity-alerts" app: AWS-Admin/identity/cognito-alerts.ts.
+    // The shared alertsTopic + ALERTS_SNS_ARN SSM param above intentionally stay
+    // here because aws-api1 / aws-api2 publish to this topic.
+    // Deploy order: 1) deploy identity-alerts (you'll briefly get 2 emails per
+    // signup while both exist), 2) deploy this stack to drop the old rules.
 
     // 6) Return for console visibility
     //return {
