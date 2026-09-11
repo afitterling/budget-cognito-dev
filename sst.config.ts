@@ -22,6 +22,20 @@ export default $config({
       },
     });
 
+    // Callback URLs for the hosted-UI authorization-code flow, which only the
+    // MCP server uses: the web and mobile clients authenticate with
+    // USER_PASSWORD_AUTH and never see the hosted UI.
+    //
+    // Set MCP_CALLBACK_URLS to finwise-mcp's `callbackUrl` output before
+    // deploying (comma-separated for several stages). While it is unset the
+    // OAuth flow stays switched off and this client is byte-identical to what
+    // it was before — deploying without the variable changes nothing.
+    const mcpCallbackUrls = (process.env.MCP_CALLBACK_URLS ?? "")
+      .split(",")
+      .map((u) => u.trim())
+      .filter(Boolean);
+    const oauthEnabled = mcpCallbackUrls.length > 0;
+
     const userPoolClient = new aws.cognito.UserPoolClient("MyUserPoolClient", {
       userPoolId: userPool.id,
       generateSecret: false, // must be false for USER_PASSWORD_AUTH
@@ -31,6 +45,18 @@ export default $config({
         "ALLOW_USER_SRP_AUTH",
       ],
       supportedIdentityProviders: ["COGNITO"],
+      // Additive: the code flow runs alongside the existing auth flows rather
+      // than replacing them. PKCE is enforced by the MCP server on both legs;
+      // this client has no secret to fall back on.
+      ...(oauthEnabled
+        ? {
+          allowedOauthFlowsUserPoolClient: true,
+          allowedOauthFlows: ["code"],
+          allowedOauthScopes: ["openid", "email", "profile"],
+          callbackUrls: mcpCallbackUrls,
+          logoutUrls: mcpCallbackUrls,
+        }
+        : {}),
       tokenValidityUnits: {
         accessToken: "minutes",
         idToken: "hours",
