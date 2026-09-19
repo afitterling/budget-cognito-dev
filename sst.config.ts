@@ -36,6 +36,21 @@ export default $config({
       .filter(Boolean);
     const oauthEnabled = mcpCallbackUrls.length > 0;
 
+    // Deploying without the variable used to be survivable — while the flow
+    // was off, omitting it changed nothing. Now that it is on, omitting it
+    // strips allowedOauthFlows and callbackUrls back off the client and every
+    // MCP connector dies, with no error anywhere to explain why. Refuse
+    // instead. MCP_OAUTH_OFF=1 is the way out for a stage that genuinely has
+    // no MCP server.
+    if (!oauthEnabled && !process.env.MCP_OAUTH_OFF) {
+      throw new Error(
+        `MCP_CALLBACK_URLS is unset for stage ${$app.stage}. Deploying now would ` +
+        `disable the hosted-UI code flow and break every MCP connector. Set it ` +
+        `(finwise-mcp/README.md, "Deploying") or pass MCP_OAUTH_OFF=1 to confirm ` +
+        `this stage has no MCP server.`
+      );
+    }
+
     const userPoolClient = new aws.cognito.UserPoolClient("MyUserPoolClient", {
       userPoolId: userPool.id,
       generateSecret: false, // must be false for USER_PASSWORD_AUTH
@@ -57,14 +72,34 @@ export default $config({
           logoutUrls: mcpCallbackUrls,
         }
         : {}),
+      // Three tokens, three jobs.
+      //
+      // The access token (5 min) is what aws-remix, the React Native client
+      // and fast-track-app actually send to api1/api2 — they store it and
+      // refresh on expiry, so it is short by design.
+      //
+      // The ID token no longer reaches an MCP connector at all: finwise-mcp
+      // issues its own opaque session tokens and keeps Cognito's on the
+      // server, replaying them upstream. So this number now only bounds one
+      // thing — how stale a stored ID token in the MCP session table can be —
+      // and an hour is as short as is useful, since the server renews it
+      // transparently between tool calls. It used to be 24 because the
+      // connector held it and every expiry meant a visible re-login.
+      //
+      // The refresh token is the only long-lived credential here, and it is
+      // the ceiling on an MCP session: the server's own sliding window cannot
+      // outlive it. 30 days also matches aws-remix's COOKIE_LIFETIME, which
+      // the previous 24 hours contradicted — the web app intended month-long
+      // sessions and got daily logouts. Revoke it with
+      // `admin-user-global-sign-out`, or per-connector via /oauth/revoke.
       tokenValidityUnits: {
         accessToken: "minutes",
         idToken: "hours",
-        refreshToken: "hours",
+        refreshToken: "days",
       },
       accessTokenValidity: 5,
-      idTokenValidity: 24,
-      refreshTokenValidity: 24
+      idTokenValidity: 1,
+      refreshTokenValidity: 30
     });
 
     // 2) User Pool Client with password & refresh flows
